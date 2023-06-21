@@ -22,7 +22,7 @@ app.get('/search', (req, res) => {
   const query = req.query.q;
 
   // Perform search logic here using GeoDB Cities API
-  const rapidAPIKey = 'f561f21119msha0feb360f676152p1bb0bbjsn2a8f193dbadd';
+  const rapidAPIKey = '';
   const rapidAPIHost = 'wft-geo-db.p.rapidapi.com';
 
   const rapidAPIEndpoint = `https://${rapidAPIHost}/v1/geo/cities?minPopulation=1000000&namePrefix=${query}&limit=5`;

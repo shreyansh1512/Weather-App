@@ -53,7 +53,7 @@ searchInput.addEventListener('input', handleSearchInput);
 
 
 function getweather(latitude, longitude) {
-  const apiKey = '6548232590e4064ff859a7d3a6c2d044';
+  const apiKey = '';
   const weatherapiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
