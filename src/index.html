@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Web App</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search your city!">
+      <div id="searchResults"></div>
+    </div>
+
+
+    <div class="weather" id="weather" hidden>
+      <div class="top">
+        <div>
+          <p class="city" id="city"></p>
+          <p class="weather-description" id="weather-description"></p>
+        </div>
+        <img src="" alt="weather" class="weather-icon" id="icon" />
+      </div>
+      <div class="bottom">
+        <p class="temperature" id="temperature"></p>
+        <div class="details">
+          <div class="parameter-row">
+            <span class="parameter-label">Details</span>
+          </div>
+          <div class="parameter-row">
+            <span class="parameter-label">Feels like</span>
+            <span class="parameter-value" id="feels">
+
+            </span>
+          </div>
+          <div class="parameter-row">
+            <span class="parameter-label">Wind</span>
+            <span class="parameter-value" id="wind"></span>
+          </div>
+          <div class="parameter-row">
+            <span class="parameter-label">Humidity</span>
+            <span class="parameter-value" id="Humidity"></span>
+          </div>
+          <div class="parameter-row">
+            <span class="parameter-label">Pressure</span>
+            <span class="parameter-value" id="Pressure"></span>
+          </div>
+        </div>
+      </div>
+    </div><br>
+
+
+    <div id="forecast-box">
+
+    </div>
+
+
+  </div>
+
+
+  <script src="script/search.js"></script>
+</body>
+
+</html>
