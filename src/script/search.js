@@ -53,7 +53,7 @@ searchInput.addEventListener('input', handleSearchInput);
 
 
 function getweather(latitude, longitude) {
-  const apiKey = '';
+  const apiKey = '6548232590e4064ff859a7d3a6c2d044';
   const weatherapiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
   const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
@@ -101,7 +101,7 @@ function getweather(latitude, longitude) {
       });
 
       const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-
+      forecast_container.innerHTML = "";
       // Process the forecast data as needed
       forecastData.forEach(item => {
         const date = new Date(item.dt * 1000);
@@ -129,11 +129,13 @@ function getweather(latitude, longitude) {
         imgicon.classList.add('icon-small');
         imgicon.src = `icons/${icon}.png`;
 
+
         dayrow.appendChild(imgicon);
         dayrow.appendChild(daylabel);
         //dayrow.appendChild(disclabel);
         dayrow.appendChild(minmaxlabel);
         forecast_container.appendChild(dayrow);
+        forecast_container.removeAttribute('hidden');
 
         console.log(`Date: ${date.toDateString()}`);
         console.log(`Temperature: ${temperature}°C`);
